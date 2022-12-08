@@ -6,7 +6,9 @@ const Navbar = () => {
   return (
     <Container>
       <NavbarStyled>
-        <h1>Floral Fantasy</h1>
+        <h1>
+          <a href="index.html">Floral Fantasy</a>
+        </h1>
 
         <Cart />
       </NavbarStyled>
