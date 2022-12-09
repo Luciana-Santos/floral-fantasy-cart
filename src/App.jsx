@@ -1,5 +1,6 @@
 import { ThemeProvider } from 'styled-components';
 import Header from './components/Header/Header';
+import Main from './components/Main/Main';
 import { GlobalStyles, theme } from './GlobalStyles';
 
 const App = () => {
@@ -8,6 +9,7 @@ const App = () => {
       <>
         <GlobalStyles />
         <Header />
+        <Main />
       </>
     </ThemeProvider>
   );
