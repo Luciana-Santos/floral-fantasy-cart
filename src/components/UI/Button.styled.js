@@ -14,12 +14,13 @@ export const ButtonStyled = styled.button`
   letter-spacing: 0.05em;
   position: relative;
   overflow: hidden;
+  border: none;
   z-index: 1;
 
   &::after {
     content: '';
     position: absolute;
-    background: hsla(182, 85%, 21%, 1);
+    background: ${({ theme }) => theme.colors.mdTurquoise};
     z-index: -1;
     display: block;
     transition: all 0.35s;

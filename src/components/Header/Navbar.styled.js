@@ -6,4 +6,8 @@ export const NavbarStyled = styled.nav`
   gap: 1.25rem;
   justify-content: space-between;
   align-items: center;
+
+  h1 a {
+    color: ${({ theme }) => theme.colors.dkTurquoise};
+  }
 `;
