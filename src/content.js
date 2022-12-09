@@ -1,4 +1,4 @@
-export const content = {
+const content = {
   filterItems: [
     {
       id: Math.round(Math.random() * 99999),
@@ -22,3 +22,5 @@ export const content = {
     },
   ],
 };
+
+export default content;
