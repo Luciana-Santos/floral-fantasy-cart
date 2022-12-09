@@ -1,4 +1,15 @@
+import { ThemeProvider } from 'styled-components';
+import Header from './components/Header/Header';
+import { GlobalStyles, theme } from './GlobalStyles';
+
 const App = () => {
-  return <h1>Let's get started!</h1>;
+  return (
+    <ThemeProvider theme={theme}>
+      <>
+        <GlobalStyles />
+        <Header />
+      </>
+    </ThemeProvider>
+  );
 };
 export default App;
