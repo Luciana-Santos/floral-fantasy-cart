@@ -1,4 +1,4 @@
-import Button from '../UI/Button';
+import { ButtonStyled } from '../UI/Button.styled';
 import { HeroStyled } from './Hero.styled';
 
 const Hero = () => {
@@ -9,7 +9,9 @@ const Hero = () => {
         <br /> Grow a garden
       </h2>
 
-      <Button />
+      <ButtonStyled as="a" href="index.html">
+        Shop
+      </ButtonStyled>
     </HeroStyled>
   );
 };

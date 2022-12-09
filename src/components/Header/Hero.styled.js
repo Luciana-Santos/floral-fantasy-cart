@@ -13,6 +13,7 @@ export const HeroStyled = styled.section`
 
   h2 {
     font-size: clamp(1.5rem, 4vw, 2.75rem);
+    line-height: 1.5em;
     color: ${({ theme }) => theme.colors.dkTurquoise};
   }
 
