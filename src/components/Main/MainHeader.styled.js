@@ -4,7 +4,7 @@ export const MainHeaderStyled = styled.ul`
   display: flex;
   flex-wrap: wrap;
   column-gap: 1.25em;
-  font-size: 1.25rem;
+  font-size: clamp(1rem, 4vw, 1.25rem);
   justify-content: center;
   color: ${({ theme }) => theme.colors.mdGray};
   border-top: 0.0625em solid ${({ theme }) => theme.colors.ltBlueGray};
