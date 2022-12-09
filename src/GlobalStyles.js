@@ -47,7 +47,8 @@ export const theme = {
   colors: {
     body: 'hsla(0, 0%, 8%, 1)',
     white: 'hsla(0, 0%, 100%, 1)',
-    ltgray: 'hsla(190, 14%, 84%, 1)',
+    ltBlueGray: 'hsla(190, 14%, 84%, 1)',
+    mdBlueGray: 'hsla(187, 13%, 73%, 1)',
     mdGray: 'hsla(0, 0%, 51%, 1)',
     dkTurquoise: 'hsla(187, 100%, 10%, 1)',
   },
