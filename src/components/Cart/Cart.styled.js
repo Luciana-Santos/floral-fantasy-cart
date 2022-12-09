@@ -1,6 +1,7 @@
 import styled from 'styled-components';
+import { ButtonStyled } from '../UI/Button.styled';
 
-export const CartStyled = styled.div`
+export const CartStyled = styled(ButtonStyled)`
   background: ${({ theme }) => theme.colors.ltBlueGray};
   display: flex;
   gap: 0.375rem;
@@ -9,9 +10,16 @@ export const CartStyled = styled.div`
   padding-block: 0.25rem;
   border-radius: 0.25rem;
   cursor: pointer;
+  color: ${({ theme }) => theme.colors.dkTurquoise};
+  transition: all 0.35s;
+  margin: 0;
+
+  &:after {
+    background: ${({ theme }) => theme.colors.dkTurquoise};
+  }
 
   &:hover {
-    background: ${({ theme }) => theme.colors.mdBlueGray};
+    color: ${({ theme }) => theme.colors.white};
   }
 
   span {

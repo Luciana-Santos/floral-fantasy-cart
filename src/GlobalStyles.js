@@ -51,6 +51,7 @@ export const theme = {
     mdBlueGray: 'hsla(187, 13%, 73%, 1)',
     mdGray: 'hsla(0, 0%, 51%, 1)',
     dkTurquoise: 'hsla(187, 100%, 10%, 1)',
+    mdTurquoise: 'hsla(182, 85%, 21%, 1)',
   },
   breakpoints: {
     minWidth: {
