@@ -38,6 +38,14 @@ export const Container = styled.div`
   margin-inline: auto;
 `;
 
+export const Flex = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: ${({ jusCon }) => (jusCon ? jusCon : '')};
+  align-items: ${({ algItm }) => (algItm ? algItm : '')};
+  gap: ${({ gap }) => (gap ? gap : '')};
+`;
+
 // minWidth: 640, 960, 1200
 // maxWidth: 639.98, 959.98, 1199.98
 export const theme = {
