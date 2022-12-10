@@ -1,12 +1,19 @@
-import { IoCart } from 'react-icons/io5';
-import { CartStyled } from './Cart.styled';
+import ModalCart from '../UI/ModalCart';
+import CartItem from './CartItem';
 
 const Cart = () => {
   return (
-    <CartStyled>
-      <IoCart size={18} />
-      <span>13</span>
-    </CartStyled>
+    <ModalCart>
+      <h3>Your Cart</h3>
+      <ul>
+        <CartItem />
+      </ul>
+
+      <div>
+        <h4>Total</h4>
+        <span>$195.65</span>
+      </div>
+    </ModalCart>
   );
 };
 export default Cart;

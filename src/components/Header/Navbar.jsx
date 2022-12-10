@@ -1,8 +1,8 @@
 import { Container } from '../../GlobalStyles';
-import Cart from '../Cart/Cart';
+import CartButton from '../Cart/CartButton';
 import { NavbarStyled } from './Navbar.styled';
 
-const Navbar = () => {
+const Navbar = ({ onShowCart }) => {
   return (
     <Container>
       <NavbarStyled>
@@ -10,7 +10,7 @@ const Navbar = () => {
           <a href="index.html">Floral Fantasy</a>
         </h1>
 
-        <Cart />
+        <CartButton onClick={onShowCart} />
       </NavbarStyled>
     </Container>
   );

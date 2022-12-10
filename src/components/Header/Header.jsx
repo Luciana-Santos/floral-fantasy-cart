@@ -1,10 +1,10 @@
 import Hero from './Hero';
 import Navbar from './Navbar';
 
-const Header = () => {
+const Header = ({ onShowCart }) => {
   return (
     <header>
-      <Navbar />
+      <Navbar onShowCart={onShowCart} />
       <Hero />
     </header>
   );

@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { ButtonStyled } from '../UI/Button.styled';
 
-export const CartStyled = styled(ButtonStyled)`
+export const CartButtonStyled = styled(ButtonStyled)`
   background: ${({ theme }) => theme.colors.ltBlueGray};
   display: flex;
   gap: 0.375rem;
