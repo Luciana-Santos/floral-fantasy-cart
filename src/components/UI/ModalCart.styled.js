@@ -7,7 +7,7 @@ export const BackdropStyled = styled.div`
   left: 0;
   width: 100%;
   height: 100vh;
-  z-index: 20;
+  z-index: 1000;
   background-color: rgba(0, 0, 0, 0.75);
 `;
 
@@ -23,8 +23,8 @@ export const ModalOverlayStyled = styled(Container)`
   background-color: white;
   padding: 1rem;
   border-radius: 4px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
-  z-index: 30;
+  box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.3);
+  z-index: 1001;
   animation: slide-down 300ms ease-out forwards;
 
   @keyframes slide-down {
