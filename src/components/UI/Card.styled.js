@@ -9,6 +9,7 @@ export const CardStyled = styled.li`
   border-radius: 4px;
   overflow: hidden;
   position: relative;
+  max-width: 300px;
 
   img {
     border-radius: 4px;
