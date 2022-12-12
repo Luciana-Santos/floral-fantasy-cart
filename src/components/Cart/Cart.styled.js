@@ -1,28 +1,38 @@
 import styled from 'styled-components';
-import { ButtonStyled } from '../UI/Button.styled';
 
-export const CartStyled = styled(ButtonStyled)`
-  background: ${({ theme }) => theme.colors.ltBlueGray};
-  display: flex;
-  gap: 0.375rem;
-  align-items: center;
-  padding-inline: 0.5rem;
-  padding-block: 0.25rem;
-  border-radius: 0.25rem;
-  cursor: pointer;
-  color: ${({ theme }) => theme.colors.dkTurquoise};
-  transition: all 0.35s;
-  margin: 0;
+export const CartStyled = styled.div`
+  padding-block: 1rem;
+  display: grid;
+  gap: 20px;
 
-  &:after {
-    background: ${({ theme }) => theme.colors.dkTurquoise};
+  h3 {
+    text-align: center;
+    font-size: 24px;
+    color: ${({ theme }) => theme.colors.dkTurquoise};
   }
 
-  &:hover {
-    color: ${({ theme }) => theme.colors.white};
+  ul li:not(:last-child) {
+    border-bottom: 1px solid ${({ theme }) => theme.colors.ltBlueGray};
+  }
+
+  @media (min-width: ${({ theme }) => theme.breakpoints.minWidth.medium}) {
+    padding-inline: 30px;
+  } ;
+`;
+
+export const CartTotalPrice = styled.div`
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+  align-items: center;
+
+  h4 {
+    text-transform: uppercase;
   }
 
   span {
-    font-size: 1.25rem;
+    font-size: 18px;
+    font-weight: bold;
+    color: ${({ theme }) => theme.colors.dkTurquoise};
   }
 `;

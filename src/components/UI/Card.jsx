@@ -1,6 +1,5 @@
-import { Flex } from '../../GlobalStyles';
 import { CardButton, CardDescrip, CardStyled } from './Card.styled';
-import { IoAddCircle, IoRemoveCircle } from 'react-icons/io5';
+import { ButtonStyled } from './Button.styled';
 
 const Card = ({ data }) => {
   const { id, name, img, price } = data;
@@ -14,6 +13,7 @@ const Card = ({ data }) => {
         <h4>{name}</h4>
         <p>${price}</p>
       </CardDescrip>
+      <CardButton>Buy</CardButton>
     </CardStyled>
   );
 };

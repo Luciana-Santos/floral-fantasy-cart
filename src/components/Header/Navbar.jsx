@@ -1,18 +1,17 @@
-import { Container } from '../../GlobalStyles';
-import Cart from '../Cart/Cart';
-import { NavbarStyled } from './Navbar.styled';
+import CartButton from '../Cart/CartButton';
+import { NavbarStyled, NavContent } from './Navbar.styled';
 
-const Navbar = () => {
+const Navbar = ({ onShowCart }) => {
   return (
-    <Container>
-      <NavbarStyled>
+    <NavbarStyled>
+      <NavContent>
         <h1>
           <a href="index.html">Floral Fantasy</a>
         </h1>
 
-        <Cart />
-      </NavbarStyled>
-    </Container>
+        <CartButton onClick={onShowCart} />
+      </NavContent>
+    </NavbarStyled>
   );
 };
 export default Navbar;

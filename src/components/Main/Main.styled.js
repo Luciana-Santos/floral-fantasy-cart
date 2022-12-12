@@ -11,9 +11,4 @@ export const MainList = styled.ul`
   gap: 20px;
   flex-wrap: wrap;
   justify-content: center;
-
-  /* li {
-    flex: 1 1 270px;
-    height: 400px;
-  } */
 `;

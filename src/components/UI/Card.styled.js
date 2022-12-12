@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { ButtonStyled } from './Button.styled';
 
 export const CardStyled = styled.li`
-  flex: 1 1 270px;
+  flex: 1 1 260px;
   display: grid;
   gap: 10px;
   font-size: 18px;
@@ -25,5 +25,11 @@ export const CardDescrip = styled.div`
 `;
 
 export const CardButton = styled(ButtonStyled)`
-  margin: 0;
+  width: 100%;
+  background: ${({ theme }) => theme.colors.ltBlueGray};
+  color: ${({ theme }) => theme.colors.dkTurquoise};
+
+  &:hover {
+    color: ${({ theme }) => theme.colors.white};
+  }
 `;
