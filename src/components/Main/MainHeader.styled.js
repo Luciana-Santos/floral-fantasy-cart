@@ -14,13 +14,10 @@ export const MainHeaderStyled = styled.ul`
     cursor: pointer;
     padding-block: 0.5em;
     transition: all 0.3s;
+    text-transform: capitalize;
   }
 
   li:hover {
-    color: ${({ theme }) => theme.colors.dkTurquoise};
-  }
-
-  li:first-child {
     color: ${({ theme }) => theme.colors.dkTurquoise};
   }
 `;

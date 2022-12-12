@@ -1,18 +1,15 @@
 import { Container } from '../../GlobalStyles';
 import { MainList, MainStyled } from './Main.styled';
 import MainHeader from './MainHeader';
-import content from '../../content.js';
 import Card from '../UI/Card';
 
-const Main = () => {
-  const { shopItems } = content;
-
+const Main = ({ items, categories, filterItems }) => {
   return (
     <Container>
       <MainStyled>
-        <MainHeader />
+        <MainHeader categories={categories} filterItems={filterItems} />
         <MainList>
-          {shopItems.map((item) => {
+          {items.map((item) => {
             return <Card key={item.id} data={item} />;
           })}
         </MainList>
