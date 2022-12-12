@@ -10,6 +10,7 @@ export const HeroStyled = styled.section`
   background-position: center;
   background-size: cover;
   height: 40vh;
+  margin-top: 72px;
 
   h2 {
     font-size: clamp(1.5rem, 4vw, 2.75rem);
