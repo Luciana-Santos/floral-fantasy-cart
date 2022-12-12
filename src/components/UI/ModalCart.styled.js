@@ -12,10 +12,14 @@ export const BackdropStyled = styled.div`
 `;
 
 export const ModalOverlayStyled = styled(Container)`
+  width: min(100% - 2rem, 40rem);
+  height: max-content;
   position: fixed;
-  top: 20vh;
-  left: 5%;
-  width: 90%;
+  right: 0;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
   background-color: white;
   padding: 1rem;
   border-radius: 4px;

@@ -13,10 +13,14 @@ const App = () => {
     setisModalCartShown(true);
   };
 
+  const closeCartHandler = () => {
+    setisModalCartShown(false);
+  };
+
   return (
     <ThemeProvider theme={theme}>
       <>
-        {isModalCartShown ? <Cart /> : null}
+        {isModalCartShown ? <Cart onCartClose={closeCartHandler} /> : null}
         <GlobalStyles />
         <Header onShowCart={openCartHandler} />
         <Main />
