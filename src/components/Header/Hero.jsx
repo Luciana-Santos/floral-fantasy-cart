@@ -9,7 +9,11 @@ const Hero = () => {
         <br /> Grow a garden
       </h2>
 
-      <ButtonStyled as="a" href="index.html">
+      <ButtonStyled
+        background={({ theme }) => theme.colors.dkTurquoise}
+        as="a"
+        href="#main"
+      >
         Shop
       </ButtonStyled>
     </HeroStyled>

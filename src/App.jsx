@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 import { ThemeProvider } from 'styled-components';
 import Cart from './components/Cart/Cart';
 import Footer from './components/Footer/Footer';
@@ -6,6 +6,7 @@ import Header from './components/Header/Header';
 import Main from './components/Main/Main';
 import { GlobalStyles, theme } from './GlobalStyles';
 import items from './content.js';
+import { ModalCartContext } from './store/ModalCartContext';
 
 const allCategories = [
   'all',
@@ -13,17 +14,10 @@ const allCategories = [
 ];
 
 const App = () => {
-  const [isModalCartShown, setisModalCartShown] = useState(false);
+  // const [isModalCartShown, setisModalCartShown] = useState(false);
   const [menuItems, setMenuItems] = useState(items);
   const [categories, setCategories] = useState(allCategories);
-
-  const openCartHandler = () => {
-    setisModalCartShown(true);
-  };
-
-  const closeCartHandler = () => {
-    setisModalCartShown(false);
-  };
+  const { isModalCartShown } = useContext(ModalCartContext);
 
   const filterItems = (category) => {
     if (category === 'all') {
@@ -37,17 +31,15 @@ const App = () => {
 
   return (
     <ThemeProvider theme={theme}>
-      <>
-        {isModalCartShown ? <Cart onCartClose={closeCartHandler} /> : null}
-        <GlobalStyles />
-        <Header onShowCart={openCartHandler} />
-        <Main
-          items={menuItems}
-          categories={categories}
-          filterItems={filterItems}
-        />
-        <Footer />
-      </>
+      {isModalCartShown ? <Cart /> : null}
+      <GlobalStyles />
+      <Header />
+      <Main
+        items={menuItems}
+        categories={categories}
+        filterItems={filterItems}
+      />
+      <Footer />
     </ThemeProvider>
   );
 };

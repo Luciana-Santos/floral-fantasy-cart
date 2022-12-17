@@ -4,15 +4,15 @@ import { IoAddCircle, IoRemoveCircle, IoClose } from 'react-icons/io5';
 export const CartItemStyled = styled.li`
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 1.25em;
   justify-content: space-between;
   align-items: center;
-  padding-block: 10px;
+  padding-block: 0.625em;
 `;
 
 export const CartItemInfo = styled.div`
   display: flex;
-  gap: 10px;
+  gap: 0.625em;
   align-items: center;
 
   img {
@@ -35,10 +35,10 @@ export const CartItemInfo = styled.div`
 export const CartItemAction = styled.div`
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 0.5em;
 
   span {
-    font-size: 18px;
+    font-size: 1.125rem;
   }
 `;
 
@@ -56,6 +56,6 @@ export const BtnCloseCart = styled(IoClose)`
   position: absolute;
   top: 0;
   right: 0;
-  font-size: 30px;
+  font-size: 1.875rem;
   cursor: pointer;
 `;

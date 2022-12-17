@@ -6,7 +6,7 @@ import Card from '../UI/Card';
 const Main = ({ items, categories, filterItems }) => {
   return (
     <Container>
-      <MainStyled>
+      <MainStyled id="main">
         <MainHeader categories={categories} filterItems={filterItems} />
         <MainList>
           {items.map((item) => {
