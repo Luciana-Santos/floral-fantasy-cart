@@ -1,3 +1,4 @@
-# Floral Fantasy - Em andamento
+# Floral Fantasy 
 
-![Preview image](https://i.postimg.cc/YCS2g2PV/desktop.png)
+![Items Preview image](https://i.postimg.cc/vHwychrm/Captura-de-Tela-1.png)
+![Cart Preview Image](https://i.postimg.cc/zXwrWh7F/Captura-de-Tela-2.png)
