@@ -22,7 +22,7 @@ export const ModalOverlayStyled = styled(Container)`
   margin: auto;
   background-color: white;
   padding: 1rem;
-  border-radius: 4px;
+  border-radius: 0.25em;
   box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.3);
   z-index: 1001;
   animation: slide-down 300ms ease-out forwards;
