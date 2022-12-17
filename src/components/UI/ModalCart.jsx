@@ -1,4 +1,6 @@
+import { useContext } from 'react';
 import { createPortal } from 'react-dom';
+import { ModalCartContext } from '../../store/ModalCartContext';
 import { BackdropStyled, ModalOverlayStyled } from './ModalCart.styled';
 
 const Backdrop = ({ onClick }) => {
@@ -15,10 +17,12 @@ const ModalOverlay = ({ children }) => {
 
 const portalElement = document.getElementById('overlays');
 
-const ModalCart = ({ children, onClick }) => {
+const ModalCart = ({ children }) => {
+  const { closeCartHandler } = useContext(ModalCartContext);
+
   return (
     <>
-      {createPortal(<Backdrop onClick={onClick} />, portalElement)}
+      {createPortal(<Backdrop onClick={closeCartHandler} />, portalElement)}
       {createPortal(<ModalOverlay>{children}</ModalOverlay>, portalElement)}
     </>
   );

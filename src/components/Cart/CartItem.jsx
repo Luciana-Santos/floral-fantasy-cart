@@ -1,3 +1,5 @@
+import { useContext, useState } from 'react';
+import { CartContext } from '../../store/CartContext';
 import {
   CartItemAction,
   CartItemInfo,
@@ -6,23 +8,32 @@ import {
   PlusOneIcon,
 } from './CartItem.styled';
 
-const CartItem = () => {
+const CartItem = ({ data }) => {
+  const { items, addItemToCart, removeItemFromCart } = useContext(CartContext);
+  const { id, name, img, price } = data;
+
+  const addNewItem = () => {
+    addItemToCart({ id, name, img, price });
+  };
+
   return (
     <CartItemStyled>
       <CartItemInfo>
         <div>
-          <img
-            src="https://raw.githubusercontent.com/Luciana-Santos/floral-fantasy/master/public/assets/shop_item-img%20(4).jpg"
-            alt=""
-          />
+          <img src={data.img} alt={data.name} />
         </div>
         <p>
-          Flower 4 <span>$24.99</span>
+          {data.name} <span>{data.price}</span>
         </p>
       </CartItemInfo>
 
       <CartItemAction>
-        <PlusOneIcon size="22" /> <span>2</span> <MinusOneIcon size="22" />
+        <MinusOneIcon
+          size="22"
+          onClick={removeItemFromCart.bind(this, data.id)}
+        />
+        <span>{data.amount}</span>
+        <PlusOneIcon size="22" onClick={addNewItem} />
       </CartItemAction>
     </CartItemStyled>
   );

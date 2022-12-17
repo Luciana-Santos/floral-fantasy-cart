@@ -44,6 +44,7 @@ export const Flex = styled.div`
   justify-content: ${({ jusCon }) => (jusCon ? jusCon : '')};
   align-items: ${({ algItm }) => (algItm ? algItm : '')};
   gap: ${({ gap }) => (gap ? gap : '')};
+  justify-self: ${({ justSelf }) => (justSelf ? justSelf : '')};
 `;
 
 // minWidth: 640, 960, 1200

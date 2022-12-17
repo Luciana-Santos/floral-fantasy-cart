@@ -3,11 +3,11 @@ import styled from 'styled-components';
 export const CartStyled = styled.div`
   padding-block: 1rem;
   display: grid;
-  gap: 20px;
+  gap: 1.25em;
 
   h3 {
     text-align: center;
-    font-size: 24px;
+    font-size: 1.5rem;
     color: ${({ theme }) => theme.colors.dkTurquoise};
   }
 
@@ -16,13 +16,13 @@ export const CartStyled = styled.div`
   }
 
   @media (min-width: ${({ theme }) => theme.breakpoints.minWidth.medium}) {
-    padding-inline: 30px;
+    padding-inline: 1.875em;
   } ;
 `;
 
 export const CartTotalPrice = styled.div`
   display: flex;
-  gap: 20px;
+  gap: 1.25em;
   justify-content: space-between;
   align-items: center;
 
@@ -31,7 +31,7 @@ export const CartTotalPrice = styled.div`
   }
 
   span {
-    font-size: 18px;
+    font-size: 1.125rem;
     font-weight: bold;
     color: ${({ theme }) => theme.colors.dkTurquoise};
   }
