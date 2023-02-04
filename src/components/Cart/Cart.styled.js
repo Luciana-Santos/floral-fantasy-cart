@@ -20,6 +20,12 @@ export const CartStyled = styled.div`
   } ;
 `;
 
+export const CartItemsList = styled.ul`
+  overflow-y: auto;
+  height: 360px;
+  padding-right: 20px;
+`;
+
 export const CartTotalPrice = styled.div`
   display: flex;
   gap: 1.25em;

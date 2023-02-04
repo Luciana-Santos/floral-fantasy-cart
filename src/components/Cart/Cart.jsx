@@ -4,7 +4,7 @@ import { CartContext } from '../../store/CartContext';
 import { ModalCartContext } from '../../store/ModalCartContext';
 import { ButtonStyled } from '../UI/Button.styled';
 import ModalCart from '../UI/ModalCart';
-import { CartStyled, CartTotalPrice } from './Cart.styled';
+import { CartItemsList, CartStyled, CartTotalPrice } from './Cart.styled';
 import CartItem from './CartItem';
 import { BtnCloseCart } from './CartItem.styled';
 
@@ -24,11 +24,11 @@ const Cart = () => {
       <BtnCloseCart onClick={closeCartHandler} />
       <CartStyled>
         <h3>Your Cart</h3>
-        <ul>
+        <CartItemsList>
           {items.map((item) => {
             return <CartItem key={item.id} data={item} />;
           })}
-        </ul>
+        </CartItemsList>
 
         <CartTotalPrice>
           <h4>Total:</h4>
